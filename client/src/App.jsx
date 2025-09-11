@@ -171,6 +171,17 @@ function App() {
       <header className="header">
         <h1 className="header-title">LoquiAI</h1>
         <div className="header-controls">
+          <select
+            id="model-selector"
+            className="selector"
+            value={model}
+            onChange={(e) => setModel(e.target.value)}
+            aria-label="Select AI model"
+          >
+            {MODELS.map(m => (
+              <option key={m.id} value={m.id}>{m.label}</option>
+            ))}
+          </select>
 
         </div>
       </header>
