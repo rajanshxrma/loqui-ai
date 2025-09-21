@@ -182,7 +182,17 @@ function App() {
               <option key={m.id} value={m.id}>{m.label}</option>
             ))}
           </select>
-
+          <select
+            id="language-selector"
+            className="selector"
+            value={language}
+            onChange={(e) => setLanguage(e.target.value)}
+            aria-label="Select language"
+          >
+            {LANGUAGES.map(l => (
+              <option key={l.code} value={l.code}>{l.label}</option>
+            ))}
+          </select>
         </div>
       </header>
 
