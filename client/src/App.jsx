@@ -224,7 +224,14 @@ function App() {
 
       <section className="input-area">
         <div className="input-container">
-
+          <button
+            id="voice-button"
+            className={`btn btn-voice ${isRecording ? 'recording' : ''}`}
+            onClick={toggleRecording}
+            aria-label={isRecording ? 'Stop recording' : 'Start voice input'}
+          >
+            🎤
+          </button>
           <textarea
             id="chat-input"
             ref={inputRef}
